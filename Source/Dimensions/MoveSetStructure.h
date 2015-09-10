@@ -22,11 +22,12 @@ public:
 		, HorProjectory(0.0f)
 		, Force(0.0f)
 		, LaunchRate(0.0f)
-		, Priority(0.0f)
+		, Priority(0)
 		, HitLag(0.0f)
-		, Sweet(0.0f)
-		, Sour(0.0f)
-		, Meteor(0.0f)
+		, Sweet(false)
+		, Sour(false)
+		, Meteor(false)
+		, MoveType(0)
 		, ParticleNum(0)
 	{};
 
@@ -57,13 +58,16 @@ public:
 		float HitLag;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = SWEET)
-		float Sweet;
+		bool Sweet;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = SOUR)
-		float Sour;
+		bool Sour;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = METEOR)
-		float Meteor;
+		bool Meteor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = MOVETYPE)
+		int32 MoveType;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = PARTICLENUM)
 		int32 ParticleNum;
