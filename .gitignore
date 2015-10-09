@@ -4,3 +4,5 @@ Saved/
 
 *.sdf
 *.sln
+Build/
+Binaries/
