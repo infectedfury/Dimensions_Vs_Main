@@ -16,7 +16,8 @@ struct FUMoveSetDataTable : public FTableRowBase
 public:
 
 	FUMoveSetDataTable() :
-		Damage(0)
+		Movename("NameOfMove")
+		, Damage(0)
 		, Knockback(0.0f)
 		, VertProjectory(0.0f)
 		, HorProjectory(0.0f)
@@ -33,6 +34,9 @@ public:
 
 	~FUMoveSetDataTable(){};
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = MOVENAME)
+		FName Movename;
+	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = DAMAGE)
 		int32 Damage;
 
